@@ -4,7 +4,7 @@ from PIL import Image
 from io import BytesIO
 import os.path
 
-def get_properties(input,output):
+def get_properties(input,output,sample=False):
     # Load the CSV file
     df = pd.read_csv(input)
 
@@ -16,7 +16,7 @@ def get_properties(input,output):
 
     # Iterate through the rows of the DataFrame
     for index, row in df.iterrows():
-        if index == 20:  # Optional: Limit rows for testing
+        if sample and index == 20:  # Optional: Limit rows for testing
             break
 
         image_url = row['Image Src']
