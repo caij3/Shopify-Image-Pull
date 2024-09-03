@@ -9,5 +9,5 @@ def merge_files(files,output):
         else:
             combined_df = pd.concat([combined_df, df], ignore_index=True)
     combined_df.to_excel(output, index=False)
-    print("Files combined and saved as 'combined_file.xlsx'.")
+    print("Files combined and saved as " + output)
     return combined_df

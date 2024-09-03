@@ -86,3 +86,5 @@ def get_properties(input,output,sample=False):
 
     # Save the DataFrame to an Excel file
     results_df.to_excel(excel_file, index=False)
+
+    return excel_file
